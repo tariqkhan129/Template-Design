@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 <link rel="icon" type="text/css" href="img/fav.png">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <title>Template </title>
 </head>
@@ -13,12 +13,14 @@
 
 <header class="header">
 
-<div class="topnav">
-    <a href="#">HOME</a>
+<div class="topnav" id="myTopnav">
+    <a href="#" class="active">HOME</a>
     <a href="#">DROPDOWN</a>
     <a href="#">GALLERY</a>
      <a href="#">PORTFOLIO</a>
-    <a href="#">STYLE DEMO</a>
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
 </div>
 <div class="search">
     <input type="text" name="name" placeholder="Search Here">
@@ -126,6 +128,15 @@
             <div><h3 class="hd">Karachi, Pakistan</div>
             	
 </footer>
-
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>
